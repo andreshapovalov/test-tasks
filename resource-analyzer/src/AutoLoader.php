@@ -30,7 +30,7 @@ class AutoLoader
             // replace the namespace prefix with the base directory, replace namespace
             // separators with directory separators in the relative class name, append
             // with .php
-            require_once $sourceDir . '/' . str_replace('\\', '/', $relativeClass) . '.php';
+            require $sourceDir . '/' . str_replace('\\', '/', $relativeClass) . '.php';
         });
     }
 }
